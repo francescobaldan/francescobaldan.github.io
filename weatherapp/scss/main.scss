@@ -1,0 +1,673 @@
+html,
+body {
+	
+	position: relative;
+	
+	height: 100vh;
+	margin: 0px;
+	
+	background-color: #E2EFFF;
+	
+	font-family: 'Roboto', sans-serif;
+	
+	.title {
+		
+		position: absolute;
+		top: 56px;
+		
+		width: 100%;
+		box-sizing: border-box;
+		
+		color: #A8CCF7;
+		
+		font-size: 48px;
+		text-align: center;
+		
+	}
+	
+	.about {
+		
+		position: absolute;
+		bottom: 56px;
+		
+		width: 100%;
+		
+		color: #A8CCF7;
+		
+		font-size: 24px;
+		text-align: center;
+		
+		a {
+			
+			color: #6898D4;
+			
+			text-decoration: none;
+			
+		}
+		
+	}
+	
+}
+
+.container {
+	
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	
+	width: 305px;
+	height: 542px;
+	border-radius: 16px;
+	
+	background-color: #FFFFFF;
+	color: #000000;
+	
+	font-size: 0px;
+	font-weight: 700;
+	
+	box-shadow: 0px 24px 56px -24px #A8CCF7;
+	
+	animation: background 8s infinite;
+	
+	
+	.image-container {
+		
+		width: 100%;
+		height: 282px;
+		
+		clip-path: inset(0px 0px);
+		
+		#sun,
+		#cloud-big,
+		#cloud-medium,
+		#cloud-small {
+			animation: day 8s infinite;
+		}
+		
+		#moon {
+			animation: moon 8s infinite;
+		}
+		
+		#stars {
+			animation: stars 8s infinite;
+		}
+		
+	}
+	
+	.location-container {
+		
+		width: 100%;
+		height: 50px;
+		margin: {
+			left: 20px;
+			right: 20px;
+		}
+		box-sizing: border-box;
+		
+		color: rgba(0, 0, 0, .87);
+		
+		font-size: 24px;
+		line-height: 50px;
+		
+		animation: blackText 8s infinite;
+		
+		span {
+			
+			&::before {
+				
+				content: 'Moscow';
+				
+				animation: place 8s infinite;
+				
+			}
+			
+			&::after {
+				
+				margin-left: 16px;
+				
+				font-family: 'themify';
+				vertical-align: bottom;
+				
+				transform: scaleX(-1);
+				
+				content: '\e62c';
+				
+			}
+			
+		}
+		
+	}
+	
+	.date-container {
+		
+		width: 100%;
+		height: 34px;
+		margin: {
+			left: 20px;
+			right: 20px;
+		}
+		box-sizing: border-box;
+		
+		color: rgba(0, 0, 0, .38);
+		
+		font-size: 14px;
+		line-height: 34px;
+		
+		animation: greyText 8s infinite;
+		
+		span {
+			
+			&::before {
+				
+				content: 'Today, 13:08';
+				
+				animation: date 8s infinite;
+				
+			}
+			
+			&::after {
+				
+				margin-left: 16px;
+				
+				font-family: 'themify';
+				
+				transform: scaleX(-1);
+				
+				content: '\e649';
+				
+			}
+			
+		}
+		
+	}
+	
+	.info-container {
+		
+		display: inline-block;
+		
+		width: 50%;
+		height: 120px;
+		
+		color: rgba(0, 0, 0, .87);
+		
+		line-height: 48px;
+		
+		animation: blackText 8s infinite;
+		
+		&.then {
+			
+			color: rgba(0, 0, 0, .38);
+			
+			animation: greyText 8s infinite;
+			
+			.desc {
+				
+				&::after {
+					
+					content: 'Night';
+					
+					animation: thenDesc 8s infinite;
+					
+				}
+				
+			}
+			
+			.temp {
+				
+				&::after {
+					
+					content: '+16';
+					
+					animation: thenTemp 8s infinite;
+					
+				}
+				
+			}
+			
+		}
+		
+		
+		.desc {
+		
+			width: 100%;
+			margin: {
+				left: 20px;
+				right: 20px;
+			}
+			box-sizing: border-box;
+
+			font-size: 14px;
+			
+			&::after {
+				content: 'Now';
+			}
+
+		}
+	
+		.temp {
+
+			width: 100%;
+			margin: {
+				left: 20px;
+				right: 20px;
+			}
+			box-sizing: border-box;
+
+			font-size: 56px;
+			
+			&::after {
+				
+				content: '+20';
+				
+				animation: nowTemp 8s infinite;
+				
+			}
+
+		}
+		
+	}
+	
+	
+	.other-info-container {
+		
+		width: 100%;
+		height: 52px;
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+		box-sizing: border-box;
+		
+		color: rgba(0, 0, 0, .87);
+		
+		animation: blackText 8s infinite;
+		
+		span {
+			
+			display: inline-block;
+			
+			font-size: 14px;
+			line-height: 52px;
+			
+		}
+		
+		.weather {
+			
+			width: 40%;
+			
+			&::after {
+				
+				content: 'Party cloudy';
+				
+				animation: weather 8s infinite;
+				
+			}
+			
+		}
+		
+		.rain {
+			
+			width: 20%;
+			
+			&::after {
+				content: '0mm';
+			}
+			
+		}
+		
+		.wind {
+			
+			width: 20%;
+			
+			&::after {
+				
+				content: '3m/s';
+				
+				animation: wind 8s infinite;
+				
+			}
+			
+		}
+		
+		.humidity {
+			
+			width: 20%;
+			
+			&::after {
+				
+				content: '85%';
+				
+				animation: humidity 8s infinite;
+				
+			}
+			
+		}
+		
+		
+	}
+	
+	.divider {
+		
+		width: calc(100% - 40px);
+		height: 2px;
+		margin: {
+			left: 20px;
+			right: 20px;
+		}
+		
+		background-color: rgba(0, 0, 0, .12);
+		
+		animation: divider 8s infinite;
+		
+	}
+	
+	
+}
+
+
+
+
+@keyframes background {
+	
+	46% {
+		background-color: #FFFFFF;
+	}
+	
+	50% {
+		background-color:#000000; 
+	}
+	
+	96% {
+		background-color:#000000; 
+	}
+	
+	100% {
+		background-color:#FFFFFF; 
+	}
+	
+}
+
+@keyframes day {
+	
+	46% {
+		transform: translate(0px,0px);
+	}
+	
+	50% {
+		transform: translate(-300px,0px);
+	}
+	
+	96% {
+		transform: translate(-300px,0px);
+	}
+	
+	100% {
+		transform: translate(0px,0px);
+	}
+	
+}
+
+@keyframes moon {
+	
+	0% {
+		transform: translate(300px,0px);
+	}
+	
+	48% {
+		transform: translate(300px,0px);
+	}
+	
+	50% {
+		transform: translate(0px,0px);
+	}
+	
+	96% {
+		transform: translate(0px,0px);
+	}
+	
+	100% {
+		transform: translate(3000px,0px);
+	}
+	
+}
+
+@keyframes stars {
+	
+	50% {
+		opacity: 0;
+	}
+	
+	62% {
+		opacity: 1;
+	}
+	
+	92% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+	
+}
+
+@keyframes blackText {
+	
+	46% {
+		color: rgba(0, 0, 0, .87);
+	}
+	
+	50% {
+		color: rgba(255, 255, 255, 1);
+	}
+	
+	96% {
+		color: rgba(255, 255, 255, 1); 
+	}
+	
+	100% {
+		color: rgba(0, 0, 0, .87);
+	}
+	
+}
+
+@keyframes greyText {
+	
+	46% {
+		color: rgba(0, 0, 0, .38);
+	}
+	
+	50% {
+		color: rgba(255, 255, 255, .5);
+	}
+	
+	96% {
+		color: rgba(255, 255, 255, .5); 
+	}
+	
+	100% {
+		color: rgba(0, 0, 0, .38);
+	}
+	
+}
+
+@keyframes divider {
+	
+	46% {
+		background-color: rgba(0, 0, 0, .12);
+	}
+	
+	50% {
+		background-color: rgba(255, 255, 255, .3); 
+	}
+	
+	96% {
+		background-color: rgba(255, 255, 255, .3); 
+	}
+	
+	100% {
+		background-color: rgba(0, 0, 0, .12);
+	}
+	
+}
+
+@keyframes place {
+	
+	47% {
+		content: 'Moscow';
+	}
+	
+	49% {
+		content: 'Saint Petersburg';
+	}
+	
+	97% {
+		content: 'Saint Petersburg'; 
+	}
+	
+	99% {
+		content: 'Moscow';
+	}
+	
+}
+
+@keyframes date {
+	
+	47% {
+		content: 'Today, 13:08';
+	}
+	
+	49% {
+		content: '04 Nov, Saturday';
+	}
+	
+	97% {
+		content: '04 Nov, Saturday';
+	}
+	
+	99% {
+		content: 'Today, 13:08';
+	}
+	
+}
+
+@keyframes nowTemp {
+	
+	47% {
+		content: '+20';
+	}
+	
+	49% {
+		content: '-8';
+	}
+	
+	97% {
+		content: '-8';
+	}
+	
+	99% {
+		content: '+20';
+	}
+	
+}
+
+@keyframes thenDesc {
+	
+	47% {
+		content: 'Night';
+	}
+	
+	49% {
+		content: 'Tomorrow';
+	}
+	
+	97% {
+		content: 'Tomorrow';
+	}
+	
+	99% {
+		content: 'Night';
+	}
+	
+}
+
+@keyframes thenTemp {
+	
+	47% {
+		content: '+16';
+	}
+	
+	49% {
+		content: '-3';
+	}
+	
+	97% {
+		content: '-3';
+	}
+	
+	99% {
+		content: '+16';
+	}
+	
+}
+
+@keyframes weather {
+	
+	47% {
+		content: 'Party cloudy';
+	}
+	
+	49% {
+		content: 'Clear';
+	}
+	
+	97% {
+		content: 'Clear';
+	}
+	
+	99% {
+		content: 'Party cloudy';
+	}
+	
+}
+
+@keyframes wind {
+	
+	47% {
+		content: '3m/s';
+	}
+	
+	49% {
+		content: '5m/s';
+	}
+	
+	97% {
+		content: '5m/s';
+	}
+	
+	99% {
+		content: '3m/s';
+	}
+	
+}
+
+@keyframes humidity {
+	
+	47% {
+		content: '85%';
+	}
+	
+	49% {
+		content: '93%';
+	}
+	
+	97% {
+		content: '93%';
+	}
+	
+	99% {
+		content: '85%';
+	}
+	
+}

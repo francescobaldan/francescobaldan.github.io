@@ -1,0 +1,495 @@
+@charset "UTF-8";
+/* line 1, D:/Altrè/weather/scss/main.scss */
+html,
+body {
+  position: relative;
+  height: 100vh;
+  margin: 0px;
+  background-color: #E2EFFF;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 13, D:/Altrè/weather/scss/main.scss */
+html .title,
+body .title {
+  position: absolute;
+  top: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #A8CCF7;
+  font-size: 48px;
+  text-align: center;
+}
+
+/* line 28, D:/Altrè/weather/scss/main.scss */
+html .about,
+body .about {
+  position: absolute;
+  bottom: 56px;
+  width: 100%;
+  color: #A8CCF7;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* line 40, D:/Altrè/weather/scss/main.scss */
+html .about a,
+body .about a {
+  color: #6898D4;
+  text-decoration: none;
+}
+
+/* line 52, D:/Altrè/weather/scss/main.scss */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 305px;
+  height: 542px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 0px;
+  font-weight: 700;
+  box-shadow: 0px 24px 56px -24px #A8CCF7;
+  animation: background 8s infinite;
+}
+
+/* line 74, D:/Altrè/weather/scss/main.scss */
+.container .image-container {
+  width: 100%;
+  height: 282px;
+  clip-path: inset(0px 0px);
+}
+
+/* line 81, D:/Altrè/weather/scss/main.scss */
+.container .image-container #sun,
+.container .image-container #cloud-big,
+.container .image-container #cloud-medium,
+.container .image-container #cloud-small {
+  animation: day 8s infinite;
+}
+
+/* line 88, D:/Altrè/weather/scss/main.scss */
+.container .image-container #moon {
+  animation: moon 8s infinite;
+}
+
+/* line 92, D:/Altrè/weather/scss/main.scss */
+.container .image-container #stars {
+  animation: stars 8s infinite;
+}
+
+/* line 98, D:/Altrè/weather/scss/main.scss */
+.container .location-container {
+  width: 100%;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 24px;
+  line-height: 50px;
+  animation: blackText 8s infinite;
+}
+
+/* line 117, D:/Altrè/weather/scss/main.scss */
+.container .location-container span::before {
+  content: 'Moscow';
+  animation: place 8s infinite;
+}
+
+/* line 125, D:/Altrè/weather/scss/main.scss */
+.container .location-container span::after {
+  margin-left: 16px;
+  font-family: 'themify';
+  vertical-align: bottom;
+  transform: scaleX(-1);
+  content: '\e62c';
+}
+
+/* line 142, D:/Altrè/weather/scss/main.scss */
+.container .date-container {
+  width: 100%;
+  height: 34px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 14px;
+  line-height: 34px;
+  animation: greyText 8s infinite;
+}
+
+/* line 161, D:/Altrè/weather/scss/main.scss */
+.container .date-container span::before {
+  content: 'Today, 13:08';
+  animation: date 8s infinite;
+}
+
+/* line 169, D:/Altrè/weather/scss/main.scss */
+.container .date-container span::after {
+  margin-left: 16px;
+  font-family: 'themify';
+  transform: scaleX(-1);
+  content: '\e649';
+}
+
+/* line 185, D:/Altrè/weather/scss/main.scss */
+.container .info-container {
+  display: inline-block;
+  width: 50%;
+  height: 120px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 48px;
+  animation: blackText 8s infinite;
+}
+
+/* line 198, D:/Altrè/weather/scss/main.scss */
+.container .info-container.then {
+  color: rgba(0, 0, 0, 0.38);
+  animation: greyText 8s infinite;
+}
+
+/* line 206, D:/Altrè/weather/scss/main.scss */
+.container .info-container.then .desc::after {
+  content: 'Night';
+  animation: thenDesc 8s infinite;
+}
+
+/* line 218, D:/Altrè/weather/scss/main.scss */
+.container .info-container.then .temp::after {
+  content: '+16';
+  animation: thenTemp 8s infinite;
+}
+
+/* line 231, D:/Altrè/weather/scss/main.scss */
+.container .info-container .desc {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* line 242, D:/Altrè/weather/scss/main.scss */
+.container .info-container .desc::after {
+  content: 'Now';
+}
+
+/* line 248, D:/Altrè/weather/scss/main.scss */
+.container .info-container .temp {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  font-size: 56px;
+}
+
+/* line 259, D:/Altrè/weather/scss/main.scss */
+.container .info-container .temp::after {
+  content: '+20';
+  animation: nowTemp 8s infinite;
+}
+
+/* line 272, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container {
+  width: 100%;
+  height: 52px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  animation: blackText 8s infinite;
+}
+
+/* line 286, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 52px;
+}
+
+/* line 295, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .weather {
+  width: 40%;
+}
+
+/* line 299, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .weather::after {
+  content: 'Party cloudy';
+  animation: weather 8s infinite;
+}
+
+/* line 309, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .rain {
+  width: 20%;
+}
+
+/* line 313, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .rain::after {
+  content: '0mm';
+}
+
+/* line 319, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .wind {
+  width: 20%;
+}
+
+/* line 323, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .wind::after {
+  content: '3m/s';
+  animation: wind 8s infinite;
+}
+
+/* line 333, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .humidity {
+  width: 20%;
+}
+
+/* line 337, D:/Altrè/weather/scss/main.scss */
+.container .other-info-container .humidity::after {
+  content: '85%';
+  animation: humidity 8s infinite;
+}
+
+/* line 350, D:/Altrè/weather/scss/main.scss */
+.container .divider {
+  width: calc(100% - 40px);
+  height: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0.12);
+  animation: divider 8s infinite;
+}
+
+@keyframes background {
+  46% {
+    background-color: #FFFFFF;
+  }
+  50% {
+    background-color: #000000;
+  }
+  96% {
+    background-color: #000000;
+  }
+  100% {
+    background-color: #FFFFFF;
+  }
+}
+
+@keyframes day {
+  46% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-300px, 0px);
+  }
+  96% {
+    transform: translate(-300px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes moon {
+  0% {
+    transform: translate(300px, 0px);
+  }
+  48% {
+    transform: translate(300px, 0px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  96% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(3000px, 0px);
+  }
+}
+
+@keyframes stars {
+  50% {
+    opacity: 0;
+  }
+  62% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blackText {
+  46% {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  50% {
+    color: white;
+  }
+  96% {
+    color: white;
+  }
+  100% {
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+@keyframes greyText {
+  46% {
+    color: rgba(0, 0, 0, 0.38);
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  96% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    color: rgba(0, 0, 0, 0.38);
+  }
+}
+
+@keyframes divider {
+  46% {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  96% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes place {
+  47% {
+    content: 'Moscow';
+  }
+  49% {
+    content: 'Saint Petersburg';
+  }
+  97% {
+    content: 'Saint Petersburg';
+  }
+  99% {
+    content: 'Moscow';
+  }
+}
+
+@keyframes date {
+  47% {
+    content: 'Today, 13:08';
+  }
+  49% {
+    content: '04 Nov, Saturday';
+  }
+  97% {
+    content: '04 Nov, Saturday';
+  }
+  99% {
+    content: 'Today, 13:08';
+  }
+}
+
+@keyframes nowTemp {
+  47% {
+    content: '+20';
+  }
+  49% {
+    content: '-8';
+  }
+  97% {
+    content: '-8';
+  }
+  99% {
+    content: '+20';
+  }
+}
+
+@keyframes thenDesc {
+  47% {
+    content: 'Night';
+  }
+  49% {
+    content: 'Tomorrow';
+  }
+  97% {
+    content: 'Tomorrow';
+  }
+  99% {
+    content: 'Night';
+  }
+}
+
+@keyframes thenTemp {
+  47% {
+    content: '+16';
+  }
+  49% {
+    content: '-3';
+  }
+  97% {
+    content: '-3';
+  }
+  99% {
+    content: '+16';
+  }
+}
+
+@keyframes weather {
+  47% {
+    content: 'Party cloudy';
+  }
+  49% {
+    content: 'Clear';
+  }
+  97% {
+    content: 'Clear';
+  }
+  99% {
+    content: 'Party cloudy';
+  }
+}
+
+@keyframes wind {
+  47% {
+    content: '3m/s';
+  }
+  49% {
+    content: '5m/s';
+  }
+  97% {
+    content: '5m/s';
+  }
+  99% {
+    content: '3m/s';
+  }
+}
+
+@keyframes humidity {
+  47% {
+    content: '85%';
+  }
+  49% {
+    content: '93%';
+  }
+  97% {
+    content: '93%';
+  }
+  99% {
+    content: '85%';
+  }
+}
+
+/*# sourceMappingURL=../css/main.map */
